@@ -4,7 +4,7 @@
 
   import "./app.css";
   import { debugLib, PersistedState } from "$lib/imports.ts"; // deno import
-  const debug = debugLib("svexplib:app");
+  // const debug = debugLib("svexplib:app");
 
   let { children } = $props();
   let showSettings = $state(false);
@@ -25,10 +25,10 @@
   $effect(() => {
     if (debugMode.current) {
       localStorage.debug = "svexplib:*";
-      debug.enable(localStorage.debug);
+      debugLib.enable(localStorage.debug);
     } else {
       localStorage.debug = "";
-      debug.disable();
+      debugLib.disable();
     }
   });
 </script>

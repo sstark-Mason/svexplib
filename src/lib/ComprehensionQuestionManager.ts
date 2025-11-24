@@ -9,22 +9,17 @@ export class ComprehensionQuestionManager {
   static instance: ComprehensionQuestionManager;
   private questions: Record<string, ComprehensionQuestion> = {};
   private continueButtonId: string | null = null;
-  private continueButtonElement: HTMLButtonElement | null = null;
 
   public setContinueButtonElement(id: string | null) {
-    // Find the continue button element by ID
     if (!id) {
       debug("No continue button ID provided.");
       return;
     }
     this.continueButtonId = id;
-    this.continueButtonElement = document.getElementById(
-      id,
-    ) as HTMLButtonElement;
-    if (this.continueButtonElement) {
-      debug("Continue button element set:", this.continueButtonElement);
-      // Initially disable the continue button
-      this.continueButtonElement.disabled = true;
+    const button = document.getElementById(id) as HTMLButtonElement;
+    if (button) {
+      debug("Continue button element set:", button);
+      button.disabled = true;
     } else {
       debug("Continue button element not found with ID:", id);
     }
@@ -81,9 +76,14 @@ export class ComprehensionQuestionManager {
   }
 
   private enableContinueButton(enabled: boolean) {
-    if (this.continueButtonElement) {
-      this.continueButtonElement.disabled = !enabled;
-      debug(`Continue button ${enabled ? "enabled" : "disabled"}.`);
+    if (this.continueButtonId) {
+      const button = document.getElementById(this.continueButtonId) as HTMLButtonElement;
+      if (button) {
+        button.disabled = !enabled;
+        debug(`Continue button ${enabled ? "enabled" : "disabled"}.`);
+      } else {
+        debug("Continue button element not found with ID:", this.continueButtonId);
+      }
     }
   }
 }
