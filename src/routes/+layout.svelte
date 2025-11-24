@@ -3,8 +3,8 @@
   // import SettingsMenu from '$lib/settingsMenu.svelte';
 
   import "./app.css";
-  import debug from "debug";
-  import { PersistedState } from "runed";
+  import { debugLib, PersistedState } from "$lib/imports.ts"; // deno import
+  const debug = debugLib("svexplib:app");
 
   let { children } = $props();
   let showSettings = $state(false);

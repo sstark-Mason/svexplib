@@ -9,6 +9,7 @@
     "npm:runed@0.36": "0.36.0_@sveltejs+kit@2.48.5__@sveltejs+vite-plugin-svelte@6.2.1___svelte@5.43.8____acorn@8.15.0___vite@7.2.2____picomatch@4.0.3__svelte@5.43.8___acorn@8.15.0__vite@7.2.2___picomatch@4.0.3__acorn@8.15.0_svelte@5.43.8__acorn@8.15.0_@sveltejs+vite-plugin-svelte@6.2.1__svelte@5.43.8___acorn@8.15.0__vite@7.2.2___picomatch@4.0.3_vite@7.2.2__picomatch@4.0.3",
     "npm:svelte-check@^4.3.3": "4.3.4_svelte@5.43.8__acorn@8.15.0_typescript@5.9.3",
     "npm:svelte-drag-and-drop-actions@^1.0.2": "1.0.2",
+    "npm:svelte-prism@^1.1.6": "1.1.6",
     "npm:svelte@^5.41.0": "5.43.8_acorn@8.15.0",
     "npm:typescript@^5.9.3": "5.9.3",
     "npm:vite@^7.1.10": "7.2.2_picomatch@4.0.3"
@@ -620,6 +621,13 @@
         "tslib"
       ]
     },
+    "svelte-prism@1.1.6": {
+      "integrity": "sha512-FEVBqD1wcSKYwRpgaMGRfEIQPquKMwo+vl91lnFHhQCtTivxgkCS6ZWNOyvZGRsNbWk50fYZOWOp3xXIBWNeSw==",
+      "dependencies": [
+        "prism-svelte",
+        "prismjs"
+      ]
+    },
     "svelte@5.43.8_acorn@8.15.0": {
       "integrity": "sha512-d53/xClCjHsuFXuHsn7+F/0NKkkwgRv8kLg2his5YBYqVtfIrBqkvWd+5ZjYN6ryk/jv/rJF00vexXHkK8ofXA==",
       "dependencies": [
@@ -726,6 +734,7 @@
         "npm:runed@0.36",
         "npm:svelte-check@^4.3.3",
         "npm:svelte-drag-and-drop-actions@^1.0.2",
+        "npm:svelte-prism@^1.1.6",
         "npm:svelte@^5.41.0",
         "npm:typescript@^5.9.3",
         "npm:vite@^7.1.10"
