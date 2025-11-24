@@ -45,12 +45,30 @@
     manager: undefined,
   };
 
+  const selectedAnswers = new PersistedState<string[]>(
+    `${qid}-selected`,
+    [],
+  );
+
   onMount(() => {
     debug(`Mounting RequiredQuestion with qid: ${question.qid}`);
     question.manager = ComprehensionQuestionManager.getInstance(
       question.continueButtonId,
     );
     question.manager.registerQuestion(question.qid);
+
+    // Restore selected answers from persisted state
+    for (const cid of selectedAnswers.current) {
+      const input = document.getElementById(cid) as HTMLInputElement;
+      const ans = question.answers.find((a) => a.cid === cid);
+      if (ans && input) {
+        ans.isSelected = true;
+        input.checked = true;
+      }
+    }
+
+    const isAnySelected = selectedAnswers.current.length > 0;
+    question.manager.updateQuestionStatus(question.qid, isAnySelected);
   });
 
   function answerClicked(cid: string) {
@@ -59,6 +77,12 @@
     if (ans) {
       ans.isSelected = !ans.isSelected;
       debug(`Answer ${ans.text} isSelected: ${ans.isSelected}`);
+      
+      if (ans.isSelected) {
+        selectedAnswers.current = [...selectedAnswers.current, cid];
+      } else {
+        selectedAnswers.current = selectedAnswers.current.filter((id) => id !== cid);
+      }
     }
 
     // Notify the manager about the answer selection
