@@ -2,6 +2,7 @@
   import { goto } from "$app/navigation";
 </script>
 
+<div class="page-content">
 <h1>Welcome.</h1>
 
 <p>By continuing, you are agreeing to participate in this experiment.</p>
@@ -24,3 +25,5 @@
 >
   I agree
 </button>
+
+</div>

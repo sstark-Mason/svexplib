@@ -1,5 +1,9 @@
 <script>
+  // export const widePage = true;
   import TowerofHanoi from "$lib/TowerofHanoi.svelte";
 </script>
 
-<TowerofHanoi />
+<div class="page-content wide">
+  <TowerofHanoi />
+</div>
+

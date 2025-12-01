@@ -13,6 +13,9 @@ const config = {
     adapter: adapter(),
   },
   extensions: [".svelte", ".svx"],
+  compilerOptions: {
+    customElement: true,
+  }
 };
 
 export default config;

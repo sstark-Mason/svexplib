@@ -5,6 +5,8 @@
   import ComprehensionQuestion from "$lib/ComprehensionQuestion.svelte";
 </script>
 
+<div class="page-content">
+
 <h1>Welcome to the svexplib demo.</h1>
 <p>This site showcases the web components available in this library.</p>
 <p>Web components are built for easy integration into any page.</p>
@@ -39,3 +41,4 @@
   continueButtonId="next-button"
 />
   
+</div>

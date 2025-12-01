@@ -3,6 +3,8 @@
   import RequiredQuestion from "$lib/RequiredQuestion.svelte";
 </script>
 
+<div class="page-content">
+
 <h1>Comprehension Questions</h1>
 
 <ComprehensionQuestion
@@ -99,3 +101,5 @@
 >
   Next
 </button>
+
+</div>

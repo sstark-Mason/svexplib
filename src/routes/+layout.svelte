@@ -6,7 +6,8 @@
   import { debugLib, PersistedState } from "$lib/imports.ts"; // deno import
   // const debug = debugLib("svexplib:app");
 
-  let { children } = $props();
+  let { children }: { children?: any } = $props();
+  // let { children, widePage = false }: { children?: any; widePage?: boolean } = $props();
   let showSettings = $state(false);
 
   const darkMode = new PersistedState<boolean>("settings-dark-mode", true);
@@ -113,14 +114,11 @@
   </div>
 </nav>
 
-{@render children?.()}
+<!-- <main class="page-content" class:wide={widePage}> -->
+ <main>
+  {@render children?.()}
+</main>
 
 <style>
-  nav {
-    background-color: var(--nav-bg-color);
-    color: var(--nav-text-color);
-    padding: 1rem;
-    display: flex;
-    justify-content: space-between;
-  }
+
 </style>

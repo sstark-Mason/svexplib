@@ -44,11 +44,6 @@
         towers[0].disks = disks;
     });
 
-    // $effect(() => {
-    //     towers[0].disks = [...disks].sort((a, b) => a.width - b.width);
-    //     $inspect('Towers initialized:', towers);
-    // });
-
     let topDisks = $derived.by(() => {
         const topDiskIds = new Array<string>();
         for (const tower of towers) {
@@ -147,7 +142,7 @@
 </script>
 
 
-<div id="towers-of-hanoi-container" class="towers-of-hanoi">
+<div id="towers-of-hanoi-container" class="towers-of-hanoi wide">
     {#if showToast}
         <div class="toast" role="alert" aria-live="assertive" aria-atomic="true">
             {toastMessage}
@@ -265,7 +260,7 @@
         border: 2px solid #ccc;
         margin: 10px; /* outer margin */
         padding: 0px; /* inner padding */
-        width: 90vw;
+        width: 100%;
         aspect-ratio: 5 / 2;
         /* box-sizing: border-box; */
         /* position: relative; */
