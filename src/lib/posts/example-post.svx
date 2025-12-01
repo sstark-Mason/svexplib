@@ -1,0 +1,11 @@
+---
+title: "Example post"
+date: "2025-12-01"
+tags: ["example", "demo"]
+---
+
+# Example post
+
+## Section
+
+This is `example-post.svx`, which uses mdsvex to to render HTML from Markdown.

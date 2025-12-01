@@ -3,6 +3,7 @@
   import { goto } from "$app/navigation";
 </script>
 
+<div class="page-content">
 <h1>Game explanation</h1>
 
 <p>You will play a series of game rounds with other players.</p>
@@ -57,3 +58,5 @@ Players are represented by portraits:
 >
   Next
 </button>
+
+</div>

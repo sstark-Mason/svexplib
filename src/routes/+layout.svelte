@@ -57,6 +57,10 @@
       href="/exp/ccg"
       style="color: white; text-decoration: none; margin-right: 1rem"
     >Experiment</a>
+    <a
+      href="/blog"
+      style="color: white; text-decoration: none; margin-right: 1rem"
+    >Blog</a>
     <!-- Add more links as needed -->
   </div>
 
