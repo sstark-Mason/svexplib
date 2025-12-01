@@ -196,55 +196,6 @@
 <p>Minimum Moves: {minMoves}</p>
 
 
-
-
-<!-- <svg width="100" height="100" viewBox="0 0 100 100" style="background:#eee">
-    <g>
-        <rect x="15" y="42.5" width="70" height="15" stroke="black" stroke-width="0" fill="grey" rx="15" ry="15"/>
-        <polygon points="50,20 50,80 70,50" stroke="black" stroke-width="0" fill="grey"/>
-        <path d="m 6 35 l 25 15 l -25 15 l 10 -15" fill="grey" />
-    </g>
-</svg>
-
-<svg width=100 height=100 viewBox="-50 -50 100 100" style="background:#eee">
-   <g transform="scale(1,-1)">
-    <path d="M 40 0 L -25 50 L 0 0 L -25 -50 z"/>
-   </g>
-</svg>
-
-<svg width=100 height=100 viewBox="-50 -50 100 100" style="background:#eee">
-   <g transform="scale(1,-1)" fill="grey" stroke="black" stroke-width="2">
-    <rect x="-40" y="-10" width="80" height="20" rx="10" ry="10" />
-   </g>
-</svg>
-
-<br>
-
-<svg width=100 height=100>
-    <g transform="scale(1,-1)">
-        <svg width=100 height=100 viewBox="-50 -50 100 100">
-            <rect x="-40" y="-10" width="80" height="20" rx="10" ry="10" />
-        </svg>
-
-        <svg width=100 height=100 viewBox="-50 -50 100 100" style="background:#eee">
-            <path d="M 40 0 L -25 50 L 0 0 L -25 -50 z"/>
-        </svg>
-        
-    </g>
-</svg>
-
-<br>
-
-<svg width="200" height="100" viewBox="0 0 200 100">
-  <svg x="0" y="0" width="100" height="100" viewBox="0 0 100 100">
-    <rect x="10" y="10" width="80" height="80" fill="red"/>
-  </svg>
-  <svg x="100" y="0" width="100" height="100" viewBox="0 0 100 100">
-    <circle cx="50" cy="50" r="40" fill="blue"/>
-  </svg>
-</svg> -->
-
-
 <style>
     p {
         font-family: sans-serif;

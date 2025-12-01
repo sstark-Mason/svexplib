@@ -61,6 +61,10 @@
       href="/blog"
       style="color: white; text-decoration: none; margin-right: 1rem"
     >Blog</a>
+    <a
+      href="/sandbox"
+      style="color: white; text-decoration: none; margin-right: 1rem"
+    >Sandbox</a>
     <!-- Add more links as needed -->
   </div>
 

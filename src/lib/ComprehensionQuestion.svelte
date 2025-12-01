@@ -235,12 +235,31 @@
     />
     {#if     answerLabelClasses[answer.cid] &&
       answerLabelClasses[answer.cid].includes("cq-choice-correct")}
-      <span class="cq-icon-overlay correct">✅</span>
+      <span class="cq-icon-overlay correct">
+        <!-- ✅ -->
+         <svg width="100%" height="100%" viewBox="0 0 100 100">
+          <g>
+            <circle r="35" cx="50" cy="50" fill="forestgreen" stroke="black" stroke-width="1"/>
+            <path
+              d="M20,70 L40,90 L90,40 L40,90" stroke="black" stroke-width="12"
+              transform="translate(55,30) scale(1) translate(-50,-50)"/>
+          </g>
+        </svg>
+      </span>
     {/if}
     {#if     answerLabelClasses[answer.cid] &&
       answerLabelClasses[answer.cid].includes("cq-choice-incorrect") &&
       !answerLabelClasses[answer.cid].includes("disabled")}
-      <span class="cq-icon-overlay incorrect">❌</span>
+      <span class="cq-icon-overlay incorrect">
+        <!-- ❌ -->
+        <svg width="100%" height="100%" viewBox="0 0 100 100">
+          <g>
+            <circle r="35" cx="50" cy="50" fill="red" stroke="black" stroke-width="1"/>
+            <path d="M20,10 L80,90" stroke="black" stroke-width="12" fill="none"/>
+            <path d="M20,10 L80,90" stroke="black" stroke-width="12" fill="none" transform="translate(100,0) scale(-1,1)"/>
+          </g>
+        </svg>
+      </span>
     {/if}
   </span>
   <label
@@ -377,6 +396,7 @@
     width: 1.5em;
     height: 1.5em;
     vertical-align: middle;
+    box-sizing: border-box;
   }
 
   .cq-input-wrapper:has(.cq-icon-overlay.correct) input,
@@ -390,23 +410,22 @@
     justify-content: center;
     pointer-events: none; /* So clicks go to the input */
     z-index: 2;
+    position: absolute;
+    inset: 0;
+    box-sizing: border-box;
+    top: 0px;
+    left: -5.5px;
   }
   .cq-icon-overlay.correct {
     color: var(--color-correct, green);
     position: absolute;
-    left: -1px;
-    top: -3px;
     width: 100%;
     height: 100%;
-    font-size: 0.9em;
   }
   .cq-icon-overlay.incorrect {
     color: var(--color-incorrect, red);
     position: absolute;
-    left: -1px;
-    top: -3px;
     width: 100%;
     height: 100%;
-    font-size: 1.0em;
   }
 </style>
