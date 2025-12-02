@@ -2,7 +2,7 @@ import { error } from '@sveltejs/kit';
 import { debugLib } from '$lib/imports.ts';
 const debug = debugLib('svexplib:blog:[slug]:page');
 
-export const prerender = true;
+// export const prerender = true;
 
 export async function load({ params }) {
     try {
