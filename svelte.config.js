@@ -12,12 +12,7 @@ const config = {
     // See https://svelte.dev/docs/kit/adapters for more information about adapters.
     adapter: adapter(),
     prerender: {
-      handleHttpError: ({ path, referrer, message }) => {
-				// ignore deliberate link to shiny 404 page
-				if (path === '/not-found' && referrer === '/blog/how-we-built-our-404-page') {
-					return;
-				}
-      }
+      handleHttpError: 'warn'
     }
   },
   extensions: [".svelte", ".svx"],
