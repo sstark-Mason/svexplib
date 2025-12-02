@@ -1,0 +1,24 @@
+
+---
+title: "ccg Home"
+---
+<script>
+  import { goto } from "$app/navigation";
+</script>
+
+# Welcome
+
+This is an experiment that investigates individual decision-making.
+
+<details>
+  <summary>Full consent form</summary>
+
+    By participating in this experiment, you are implicitly giving your consent to participate in this experiment.
+
+    You may withdraw from the experiment at any time without penalty by closing your browser window.
+
+</details>
+
+<br>
+
+<button id="next-button" onclick={() => goto('ccg/instructions/comprehension-intro')}>Next</button>

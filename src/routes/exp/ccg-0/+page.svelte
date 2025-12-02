@@ -10,8 +10,7 @@
 <details>
   <summary>Full consent form</summary>
   <p>
-    By participating in this experiment, you are implicitly giving your consent
-    to participate in this experiment.
+    By participating in this experiment, you are implicitly giving your consent to participate in this experiment.
   </p>
   <!-- <p>Bottom text.</p> -->
 </details>
